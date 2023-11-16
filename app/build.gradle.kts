@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("com.google.gms.google-services")
     id("androidx.navigation.safeargs")
+
 }
 
 android {
@@ -43,11 +44,12 @@ android {
 
 dependencies {
     // Import the Firebase BoM (see: https://firebase.google.com/docs/android/learn-more#bom)
+
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
 
     // Firestore
     implementation("com.google.firebase:firebase-firestore-ktx")
-
+    implementation("com.google.firebase:firebase-analytics")
     // Other Firebase/Play services deps
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
